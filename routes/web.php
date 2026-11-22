@@ -15,3 +15,4 @@ Route::livewire('/counter', 'counter');
 // });
 
 Route::view('/users', 'users');
+Route::view('/contact', 'contact');
