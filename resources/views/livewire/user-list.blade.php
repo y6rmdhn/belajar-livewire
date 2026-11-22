@@ -15,7 +15,7 @@
                         <span
                             class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600"
                         >
-                            {{ $users->total() }} pengguna
+                            {{ $this->users->total() }} pengguna
                         </span>
                     </div>
                     <p class="text-xs text-slate-500 mt-1">Daftar seluruh akun pengguna yang terdaftar di sistem</p>
@@ -55,7 +55,7 @@
 
         <!-- Stacked User List -->
         <ul role="list" class="divide-y divide-slate-100">
-            @forelse ($users as $user)
+            @forelse ($this->users as $user)
                 <li
                     class="px-6 py-4 flex items-center justify-between gap-x-6 hover:bg-slate-50/80 transition-colors duration-150"
                 >
@@ -107,9 +107,9 @@
         </ul>
 
         <!-- Pagination Footer -->
-        @if ($users->hasPages())
+        @if ($this->users->hasPages())
             <div class="px-6 py-4 bg-slate-50/70 border-t border-slate-100">
-                {{ $users->links() }}
+                {{ $this->users->links() }}
             </div>
         @endif
     </div>
